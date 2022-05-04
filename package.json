@@ -1,0 +1,25 @@
+{
+    "name": "mdxmml",
+    "displayName": "mdxmml",
+    "description": "Visual Studio Code Syntax Highlight for X68K MDX MML",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "mdx",
+            "aliases": ["X68MDX", "mdx"],
+            "extensions": ["mus", "mml"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "mdx",
+            "scopeName": "mdx",
+            "path": "./syntaxes/mdx.tmLanguage.json"
+        }]
+    }
+}

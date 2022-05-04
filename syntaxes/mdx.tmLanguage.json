@@ -1,0 +1,152 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "X68MDX",
+	"patterns": [
+		{
+			"include": "#mml-headers"
+		},
+		{
+			"include": "#mml-voices"
+		},
+		{
+			"include": "#mml-operators"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#others"
+		}
+	],
+	"repository": {
+		"mml-headers": {
+			"name": "entity.name.tag.mdxmml.header",
+			"begin": "^#",
+			"end":	"\\n",
+			"patterns": [
+				{
+					"name": "entity.name.tag.mdxmml.header",
+					"match": "#(title|pcmfile)"
+				},
+				{
+					"name": "storage.quoted.double.mdxmml.string",
+					"begin": "\"",
+					"end": "\"\\s*\\d+??"
+				}
+			]
+		},
+		"mml-voices": {
+			"name": "constant.character.mdxmml",
+			"begin": "@\\d+\\s*=\\s*{",
+			"end":	"}",
+			"patterns": [
+				{
+					"name": "constant.character.mdxmml",
+					"match": "@\\d+\\s*"
+				},{
+					"include": "#others"
+				},{
+					"name": "keyword.control.mdxmml.fm",
+					"match": "^(\\s*\\d+\\s*,){11}"
+				}, {
+					"name": "keyword.control.mdxmml.fm.ALG_FL_OP",
+					"match": "^(\\s*\\d+\\s*,){2}\\s*\\d+\\s*\\n"
+				},{
+					"include": "#comments"
+				},{
+					"name": "invalid.illegal",
+					"match": ".+"
+				}
+				
+			]
+		},
+
+		"mml-operators": {
+			"patterns": [
+				{
+					"name": "storage.quoted.double.mdxmml.string",
+					"begin": "\"",
+					"end": "\"\\s*\\d+??"
+				},
+
+				{
+					"name": "constant.character.mdxmml.channel",
+					"begin": "^[A-Z]",
+					"end": "\\s"
+				},
+				{
+					"name": "keyword.control.mdxmml.tempo",
+					"match": "(t|@t)\\s*\\d+"
+				},
+				{
+					"name": "keyword.control.mdxmml.loop",
+					"match": "[L]"
+				},
+				{
+					"name": "keyword.control.mdxmml",
+					"match": "V\\s*\\d+\\s*,\\s*\\d+\\s*"
+				},
+				{
+					"name": "keyword.control.mdxmml",
+					"match": "K\\s*[\\-\\+]?\\d+"
+				},
+				{
+					"name": "keyword.control.mdxmml.mp",
+					"match": "(MPOF|MD\\d+|MP\\d+,\\d+,\\d+)"
+				},
+				{
+					"name": "keyword.other.mdxmml.detune",
+					"match": "(D\\d+)"
+				},
+				{
+					"name": "constant.character..control.mdxmml.pan",
+					"match": "p\\s*\\d+"
+				},
+				{
+					"name": "constant.character.mdxmml.voice",
+					"match": "@\\s*\\d+"
+				},
+				{
+					"name": "keyword.control.mdxmml",
+					"match": "[lovyqk]\\s*\\d+"
+				},
+				{
+					"name": "variable.language.mdxmml.rest",
+					"match": "r\\s*\\d+"
+				},
+				{
+					"name": "variable.control.mdxmml",
+					"match": "(\\[|\\<|\\>|\\.|\\+|\\-)"
+				},
+				{
+					"name": "variable.control.mdxmml.loop",
+					"match": "\\]\\s*\\d+"
+				},
+				{
+					"name": "variable.control.mdxmml.loop",
+					"match": "\\]"
+				}
+			]
+		},
+		"comments":{
+			"patterns": [
+
+				{
+					"name": "comment.line.mdxmml",
+					"begin": "^\/\\*",
+					"end": "\\n"
+			   }
+			]
+		},
+		"others":{
+			"patterns": [
+				{
+					"name": "string.comma.mdxmml",
+					"match":","
+				}
+			]
+		}
+	},
+
+	"scopeName": "mdx"
+}
