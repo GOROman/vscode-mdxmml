@@ -9,7 +9,7 @@ X68000 MDX フォーマットの MML 用のVisual Studio Code拡張です。
 
 ## How to install
 
-- vsixファイル(mdxmml-x.x.x.vsix)をダウンロード
+- vsixファイル(mdxmml-x.x.x.vsix)を[Release](https://github.com/GOROman/vscode-mdxmml/releases)からダウンロード
 
 - Visual Studio Code から拡張機能を起動（CTRL+SHIFT+Xでも可）
 
