@@ -1,8 +1,9 @@
 {
     "name": "mdxmml",
-    "displayName": "mdxmml",
+    "displayName": "mdx mml",
     "description": "Visual Studio Code Syntax Highlight for X68K MDX MML",
     "version": "0.0.1",
+    "publisher": "GOROman",
     "engines": {
         "vscode": "^1.66.0"
     },
@@ -21,5 +22,9 @@
             "scopeName": "mdx",
             "path": "./syntaxes/mdx.tmLanguage.json"
         }]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GOROman/vscode-mdxmml.git"
     }
 }
