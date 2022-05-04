@@ -5,7 +5,7 @@ X68000 MDX フォーマットの MML 用のVisual Studio Code拡張です。
 
 ## Features
 
-\!\[feature\]\(images/mdxmml_screenshot01.png\)
+![feature](https://user-images.githubusercontent.com/159089/166627682-54bc54c6-e10d-464e-963c-bdd68f8263c1.png)
 
 ## Requirements
 
