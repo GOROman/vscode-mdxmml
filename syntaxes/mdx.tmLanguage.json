@@ -37,12 +37,12 @@
 		},
 		"mml-voices": {
 			"name": "constant.character.mdxmml",
-			"begin": "@\\d+\\s*=\\s*{",
+			"begin": "@\\s*\\d+\\s*=\\s*{",
 			"end":	"}",
 			"patterns": [
 				{
 					"name": "constant.character.mdxmml",
-					"match": "@\\d+\\s*"
+					"match": "@\\s*\\d+\\s*"
 				},{
 					"include": "#others"
 				},{
@@ -50,7 +50,7 @@
 					"match": "^(\\s*\\d+\\s*,){11}"
 				}, {
 					"name": "keyword.control.mdxmml.fm.ALG_FL_OP",
-					"match": "^(\\s*\\d+\\s*,){2}\\s*\\d+\\s*\\n"
+					"match": "^(\\s*\\d+\\s*,){2}\\s*\\d+\\s*"
 				},{
 					"include": "#comments"
 				},{
@@ -130,11 +130,9 @@
 		},
 		"comments":{
 			"patterns": [
-
 				{
 					"name": "comment.line.mdxmml",
-					"begin": "^\/\\*",
-					"end": "\\n"
+					"match": "/\\*.*$"
 			   }
 			]
 		},
