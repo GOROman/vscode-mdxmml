@@ -1,0 +1,26 @@
+{
+    "MDX Voice Template":
+    {
+        "prefix": "@0",
+        "body":[
+            "@0 = {"
+            "/*	 AR  DR  SR  RR  SL  TL  KS MUL DT1 DT2 AME"
+            "    31, 21, 19,  6,  2,  0,  0, 15,  2,  3,  0,"
+            "    31, 21, 12,  6,  2, 35,  0,  8,  2,  2,  0,"
+            "    31, 21, 13,  6,  3, 32,  0,  7,  3,  0,  0,"
+            "    31, 19, 16,  9,  2,  0,  0,  2,  3,  0,  0,"
+            "/*	ALG  FL  OP"
+            "     3,  7, 15"
+            "}"
+        ],
+        "description": "MDX Voicd template"
+    },
+    "MDX Header Template":
+    {
+        "prefix": "#",
+        "body":[
+                "#title \"\"",
+        ],
+        "description": "Header"
+    },
+}
