@@ -9,29 +9,83 @@
     },
     "categories": [
         "Programming Languages",
-        "Snippets"
+        "Snippets",
+        "Other"
+    ],
+    "keywords": [
+        "X68000",
+        "MXDRV",
+        "MDX"
     ],
     "contributes": {
-        "languages": [{
-            "id": "mdx",
-            "aliases": ["X68MDX", "mdx"],
-            "extensions": ["mus", "mml"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "mdx",
-            "scopeName": "mdx",
-            "path": "./syntaxes/mdx.tmLanguage.json"
-        }],
+  
+        "commands": [
+            {
+                "command": "mdxmml.run",
+                "title": "Play MDX!",
+                "icon": "$(play)"
+            },
+            {
+                "command": "mdxmml.stop",
+                "title": "Stop MDX",
+                "icon": "$(debug-stop)"
+            }
+        ],
+        "languages": [
+            {
+                "id": "mdx",
+                "aliases": [
+                    "X68MDX",
+                    "mdx"
+                ],
+                "extensions": [
+                    "mus",
+                    "mml"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mdx",
+                "scopeName": "mdx",
+                "path": "./syntaxes/mdx.tmLanguage.json"
+            }
+        ],
         "snippets": [
-			{
-				"language": "mdx",
-				"path": "./snippets/mdx.snippets.json"
-			}
-		]
+            {
+                "language": "mdx",
+                "path": "./snippets/mdx.snippets.json"
+            }
+        ],
+        "menus": {
+            "editor/title/run": [
+              {
+                "command": "mdxmml.run",
+                "group": "navigation"
+              }
+            ],
+            "editor/title": [
+              {
+                "command": "mdxmml.stop",
+                "group": "navigation"
+              }
+            ]
+          }  
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/GOROman/vscode-mdxmml.git"
+    },
+    "activationEvents": [
+        "onCommand:mdxmml.run",
+        "onCommand:mdxmml.stop"
+    ],
+
+    "main": "./extension.js",
+
+    "devDependencies": {
+        "@types/jest": "^27.5.0",
+        "@types/node": "^17.0.31"
     }
 }

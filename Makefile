@@ -9,3 +9,4 @@ $(TARGET): package.json syntaxes/mdx.tmLanguage.json snippets/mdx.snippets.json 
 install-tools:
 	npm install -g vsce
 #	npm install -g yo generator-code
+
