@@ -1,6 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/goroman/Documents/Work/github/vscode-mdxmml'
-npm install -g vsce
-vsce package
-make: Leaving directory `/Users/goroman/Documents/Work/github/vscode-mdxmml'
- 
