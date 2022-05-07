@@ -1,4 +1,4 @@
-VERSION = 0.0.2
+VERSION = 0.0.3dev
 TARGET	= mdxmml-$(VERSION).vsix
 
 all: $(TARGET)
